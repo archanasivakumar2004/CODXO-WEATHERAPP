@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Forecast</h1>
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+        <main class="weather-info">
+            <div id="loading" class="hidden">
+                <i class="fas fa-spinner fa-spin"></i> Loading...
+            </div>
+            <div id="error-message" class="hidden"></div>
+            <section id="current-weather" class="hidden">
+                <h2 id="city-name"></h2>
+                <div id="weather-icon"></div>
+                <p id="weather-description"></p>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-high"></i>
+                        <span id="temperature"></span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity"></span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-cloud"></i>
+                        <span id="cloudiness"></span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-umbrella"></i>
+                        <span id="rainfall"></span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind-speed"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="forecast" class="hidden">
+                <h3>5-Day Forecast</h3>
+                <div id="forecast-container"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
